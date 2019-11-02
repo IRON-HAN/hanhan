@@ -9,5 +9,6 @@ int main(){
     printf("*%010.2f*\n", RENT);
     printf("*%e*\n", RENT);
     printf("*%10.3e*\n", RENT);
+    
     return 0;
 }

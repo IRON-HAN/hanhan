@@ -7,6 +7,7 @@ int main() {
   for (i=1;i<=1000;i++ ) {
     printf("please enter the amount:\n");
     scanf("%f", &amount);
+    printf("%f\n",amount);
     total = total + amount;
     if(total>=SUM) break;
   }

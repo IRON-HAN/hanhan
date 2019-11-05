@@ -1,0 +1,16 @@
+1.当出现在表达式里时，有符号和无符号的char和short 类型都将自动被转换为int，
+在需要的情况下，将自动被转换为unsigned int（如果short与int有相同的大小，那么unsigned short 比int大；
+在那种情况下，将把unsigned short 转换为unsigned int）。在K&RC下，但不是当前的C下，float将被自动转换为double。
+因为是转换成较大的类型，所以这些转换被称为提升（promotion）。
+2.在包含两种数据类型的任何运算里，两个值都被转换成两种类型里较高的级别。
+3.类型级别从高到低的顺序是long double、double、float、unsigned long long、long long、unsigned long、long、unsigned int和int。
+一个可能的例外是当long和int具有相同大时，此时unsigned int比long的级别更高。
+之所以short和char类型没有出现在此清单里，是因为它们已经被提升到int或也可能被提升到unsigned int。
+4.在赋值语句里，计算的最后结果被转换成将要被赋予值的那个变量的类型。
+像规则1中一样，这个过程可能导致提升；但也可能导致降级（demotion），降级是将一个值转换成一个更低级的类型。
+5.当作为函数的参数被传递时，char和 short 会被转换为int，float会被转换为double。
+像在第9章“函数”中讨论的那样，可以通过函数原型来阻止自动提升的发生。
+提升通常是一个平滑的无损害的过程，但是降级可能导致真正的问题。
+原因很简单：一个较低级别的类型可能不够大，不能存放一个完整的数。一个8字节的char变量可以存放整数101，但是不能存放整数22334。
+当把浮点类型降级为整数类型时，它们被趋零截尾或舍入。这意味着23.12和23.99都被截尾成23，
+

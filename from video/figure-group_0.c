@@ -22,6 +22,6 @@ int main() {
     b[i] = a[i];
     printf("%d,%d\n",a[i],b[i]);
   }
-  system("pause");
+  getchar();
   return 0;
 }

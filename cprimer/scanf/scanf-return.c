@@ -15,6 +15,6 @@ int main() {
     printf("sum=%d",sum);
 
 
-    getchar();
+    system("pause");
     return 0;
 }

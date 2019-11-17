@@ -6,7 +6,7 @@ int main() {
 
   printf("a*x^2+b*x+c\n");
   printf("please input a,b,c\n");
-  scanf_s("%f,%f,%f", &a, &b, &c);//读取系数
+  scanf("%f,%f,%f", &a, &b, &c);//读取系数
   delta=b*b-4*a*c;
   if (a==0.0) {
   printf("error!");//判别 二次项系数

@@ -1,3 +1,5 @@
+//冒泡排序
+
 #include <stdio.h>
 int main(){
     int a[10];

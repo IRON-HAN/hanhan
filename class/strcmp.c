@@ -11,7 +11,8 @@ int main() {
   }
     for (i=0; i<3; i++) {
         if (strcmp(string, str[i])>0) {
-        strcpy(string, str[i]);
+          strcpy(string, str[i]);
+
         }
     }
 /*
@@ -26,7 +27,8 @@ int main() {
     printf("\n the largest is \n%s\n",string);
   }
 */
-    //getchar();
+     getchar();
+    printf("\n the largest is \n%s\n",string);
     system("pause");
     return 0;
 }

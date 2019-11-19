@@ -27,7 +27,7 @@ int main() {
     printf("\n the largest is \n%s\n",string);
   }
 */
-     getchar();
+
     printf("\n the largest is \n%s\n",string);
     system("pause");
     return 0;

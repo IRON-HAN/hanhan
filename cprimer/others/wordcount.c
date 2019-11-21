@@ -33,6 +33,6 @@ int main() {
            n_chars, n_words, n_lines);
     printf("partial lines=%d\n", p_lines);
     //getchar();
-    //system("pause");
+    system("pause");
     return 0;
 }

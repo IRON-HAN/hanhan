@@ -15,33 +15,28 @@ void dfs(int a,int b)
             if(dx!=0||dy!=0) dfs(a+dx,b+dy);
     }
 }
-int main()
-{
+int main() {
+      int i;
+    int p=0,q;
+    char sentence[SIZE];
   int cnt = 0;
   int status;
   int a,b;
   printf("input the size:a,b(int):\n");
   status = scanf("%d,%d", &a, &b);
+  printf("%d %d",a,b);
   while ((status == 2) && (a < SIZE) && (b < SIZE)) {
-    int i;
-    int p=0,q;
-    char sentence[SIZE];
+
     gets(sentence);
+    puts(sentence);
     for (i = 0; i <= a; i++) {
         p++;
         q = 0;
         continue;
         }
     m[p][q++]=sentence[i];
-
-    for(int i=0;i<a;i++)
-    {
-        for(int j=0;j<b;j++)
-        {
-            if(VISITED[i][j]==0 && m[i][j]=='@'){dfs(i,j);cnt++;}
-        }
-    }
   }
+    if(VISITED[0][0]==0){dfs(0,0);cnt++;}
   printf("%d\n", cnt);
   system("pause");
     return 0;

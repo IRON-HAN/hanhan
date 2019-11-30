@@ -31,7 +31,7 @@ bott=N-1;
 
 while ((loca==0) && (top<=bott))
 {
-min=0;
+  min = (int)(bott - top) / 2 + top ;
         if (number==a[min])
        {
 loca=min;
@@ -44,5 +44,7 @@ top=min+1;
    }
 
    if (loca==0 || loca==-1)
-      printf("%d isn't in tabel\n", number);
+     printf("%d isn't in tabel\n", number);
+   system("pause");
+   return 0;
 }

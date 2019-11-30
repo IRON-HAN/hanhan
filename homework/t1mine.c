@@ -4,7 +4,7 @@ int main() {
     char str[100][100];
     char sentence[100];
     int i,n;
-    gets(sentence );
+    gets(sentence);
     n = strlen(sentence);
 
     int p=0, q=0;

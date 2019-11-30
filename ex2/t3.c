@@ -11,8 +11,8 @@ for (i=0; i<N; i++)
 for (i=0; i<N/2; i++)
 {
 temp=a[i];
-a[i]=a[N-1-i];  //
-a[N-1-i]=a[i];  //
+a[i]=a[N-1-i];
+a[N-1-i]=a[i];
     }
 
 printf("\nThe new array is:");

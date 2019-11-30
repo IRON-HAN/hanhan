@@ -9,11 +9,12 @@ int main()
     gets(s2);
 
 while (s1[i] !='\0')
-       continue;//
-
+    i++;//
 while (s2[j] !='\0')
-       s1[i++]=s2[j];   		/* 拼接字符到s1  */
+  s1[i++] = s2[j++]; /* 拼接字符到s1  */
 
 s1[i] ='\0';
-    printf("\nNew string: %s",s1);
+printf("\nNew string: %s", s1);
+system("pause");
+return 0;
 }

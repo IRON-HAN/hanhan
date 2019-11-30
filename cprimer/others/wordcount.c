@@ -7,10 +7,10 @@
 int main() {
     char c;//读入字符
     char prev;//读入的前一个字符
-    long n_chars;//字符数
-    int n_lines;//行数
-    int n_words;//单词数
-    int p_lines;//不完整的行数
+    long n_chars=0L;//字符数
+    int n_lines=0;//行数
+    int n_words=0;//单词数
+    int p_lines=0;//不完整的行数
     _Bool inword = false;
 
     printf("enter text(| to terminate):\n");

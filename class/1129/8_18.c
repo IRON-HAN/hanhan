@@ -9,9 +9,7 @@ int main(){
     *(b + i) = '\0';
     printf("string a is:%s\n", a);
     printf("string b is:%s",b);
-    /*for (i=0; b[i]!='\0'; i++) {
-        printf("%c", b[i]);
-    }*/
+
     printf("\n");
     getchar();
     return 0;

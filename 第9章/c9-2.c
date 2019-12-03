@@ -1,20 +1,20 @@
 #include <stdio.h>
 int main()
- {struct student                      // ÉùÃ÷½á¹¹ÌåÀàĞÍstruct student 
-   {int num;
-    char name[20];
-    float score;
-   }student1,student2;                 // ¶¨ÒåÁ½¸ö½á¹¹Ìå±äÁ¿seudent1,student2 
-  scanf("%d%s%f",&student1.num,student1.name, &student1.score);    //ÊäÈëÑ§Éú1µĞÊı¾İ
-  scanf("%d%s%f",&student2.num,student2.name, &student2.score);    //ÊäÈëÑ§Éú1µĞÊı¾İ
-  printf("The higher score is:\n");
-  if (student1.score>student2.score)
-     printf("%d  %s  %6.2f\n",student1.num,student1.name, student1.score);
-  else if (student1.score<student2.score)
-     printf("%d  %s  %6.2f\n",student2.num,student2.name, student2.score);
-  else
-	 {printf("%d  %s  %6.2f\n",student1.num,student1.name, student1.score);
-	  printf("%d  %s  %6.2f\n",student2.num,student2.name, student2.score);
-     }
-  return 0;
- }
+   {struct student                      // ï¿½ï¿½ï¿½ï¿½ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½struct student
+      {int num;
+      char name[20];
+      float score;
+      }student1,student2;                 // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½seudent1,student2
+   scanf("%d%s%f",&student1.num,student1.name, &student1.score);    //ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+   scanf("%d%s%f",&student2.num,student2.name, &student2.score);    //ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+   printf("The higher score is:\n");
+   if (student1.score>student2.score)
+      printf("%d  %s  %6.2f\n",student1.num,student1.name, student1.score);
+   else if (student1.score<student2.score)
+      printf("%d  %s  %6.2f\n",student2.num,student2.name, student2.score);
+   else
+      {printf("%d  %s  %6.2f\n",student1.num,student1.name, student1.score);
+      printf("%d  %s  %6.2f\n",student2.num,student2.name, student2.score);
+      }
+   return 0;
+   }

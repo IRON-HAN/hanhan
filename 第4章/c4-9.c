@@ -1,3 +1,4 @@
+//一元二次方程的根
 #include <stdio.h>
 #include <math.h>
 int main()
@@ -29,4 +30,4 @@ int main()
 	  }
   }
   return 0;
-}  
+}

@@ -1,18 +1,19 @@
+//å­—ç¬¦ä¸²çš„è¯»å…¥ï¼Œå­˜æ”¾ï¼Œæ¯”è¾ƒ
 #include<stdio.h>
 #include<string.h>
 int main ( )
 {
-  char str[3][20];                 // ¶¨Òå¶þÎ¬×Ö·ûÊý×é
-  char string[20];                 // ¶¨ÒåÒ»Î¬×Ö·ûÊý×é£¬×÷Îª½»»»×Ö·û´®Ê±µÄÁÙÊ±×Ö·ûÊý×é
+  char str[3][20];                 // ï¿½ï¿½ï¿½ï¿½ï¿½Î¬ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½
+  char string[20];                 // ï¿½ï¿½ï¿½ï¿½Ò»Î¬ï¿½Ö·ï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½
   int i;
   for (i=0;i<3;i++)
-      gets (str[i]);                 // ¶ÁÈë3¸ö×Ö·û´®£¬·Ö±ð¸østr[0],str[1],str[2]   
-  if (strcmp(str[0],str[1])>0)     // Èôstr[0]´óÓÚstr[1]
-	  strcpy(string,str[0]);       // °Ñstr[0]µÄ×Ö·û´®¸³¸ø×Ö·ûÊý×éstring
-  else                             // Èôstr[0]Ð¡ÓÚµÈÓÚstr[1]
-	  strcpy(string,str[1]);       // °Ñstr[1]µÄ×Ö·û´®¸³¸ø×Ö·ûÊý×éstring 
-  if (strcmp(str[2],string)>0)     // Èôstr[2]´óÓÚstring
-      strcpy(string,str[2]);       // °Ñstr[2]µÄ×Ö·û´®¸³¸ø×Ö·ûÊý×éstring     
-  printf("\nthe largest string is:\n%s\n",string);  // Êä³östring
+      gets (str[i]);                 // ï¿½ï¿½ï¿½ï¿½3ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½str[0],str[1],str[2]
+  if (strcmp(str[0],str[1])>0)     // ï¿½ï¿½str[0]ï¿½ï¿½ï¿½ï¿½str[1]
+	  strcpy(string,str[0]);       // ï¿½ï¿½str[0]ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½string
+  else                             // ï¿½ï¿½str[0]Ð¡ï¿½Úµï¿½ï¿½ï¿½str[1]
+	  strcpy(string,str[1]);       // ï¿½ï¿½str[1]ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½string
+  if (strcmp(str[2],string)>0)     // ï¿½ï¿½str[2]ï¿½ï¿½ï¿½ï¿½string
+      strcpy(string,str[2]);       // ï¿½ï¿½str[2]ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½string
+  printf("\nthe largest string is:\n%s\n",string);  // ï¿½ï¿½ï¿½string
   return 0;
 }

@@ -28,7 +28,6 @@ int main() {
                     }
             }
     }
-
     printf("出现次数：%d\n", (num));
     system("pause");
     return 0;

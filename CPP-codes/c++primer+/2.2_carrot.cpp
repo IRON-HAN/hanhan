@@ -13,5 +13,6 @@ int main() {
     cout << endl;
     carrots = carrots - 1;
     cout << "I have " << carrots << " carrots." << endl;
+    system("pause");
     return 0;
 }

@@ -18,7 +18,7 @@ int main() {
         arr[i] = (int *)malloc(sizeof(int) * col);
     }
     //输入矩阵：
-    printf("please input:\n");
+    printf("please input a:\n");
     for (int r=0; r<row; r++) {
         for (int c=0; c<col; c++) {
             scanf("%d", &arr[r][c]);

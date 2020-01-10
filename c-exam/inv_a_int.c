@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define N 10
-int getA(int arcs[N][N],int n)//按第一行展开计算|A|
+//按第一行展开计算|A|
+int getA(int arcs[N][N],int n)
 {
 	if(n==1)
 	{
@@ -31,7 +32,8 @@ int getA(int arcs[N][N],int n)//按第一行展开计算|A|
 	}
 	return ans;
 }
-void getAStart(int arcs[N][N],int n,int ans[N][N])//计算每一行每一列的每个元素所对应的余子式，组成A*
+//计算每一行每一列的每个元素所对应的余子式，组成A*
+void getAStart(int arcs[N][N],int n,int ans[N][N])
 {
 	if(n==1)
 	{
@@ -55,11 +57,10 @@ void getAStart(int arcs[N][N],int n,int ans[N][N])//计算每一行每一列的�
 			if((i+j)%2 == 1)
 			{
 				ans[j][i] = - ans[j][i];
-			}
+            }
 		}
 	}
 }
-
 int main()
 {
     int arcs[N][N];
@@ -69,7 +70,8 @@ int main()
     printf("input n('0'to quit):\n");
 	while(scanf("%d",&n)!=EOF && n)
 	{
-		for(i=0;i<n;i++)
+        printf("input a :\n");
+        for(i=0;i<n;i++)
 		{
 			for(j=0;j<n;j++)
 			{
@@ -77,7 +79,8 @@ int main()
 			}
 		}
 
-		int a = getA(arcs,n);
+		int a = getA(arcs, n);
+		printf("|A|=:%+d\n",a);
 		if(a==0)
 		{
 			printf("can not transform!\n");
@@ -89,7 +92,7 @@ int main()
 			{
 				for(j=0;j<n;j++)
 				{
-					printf("%.3lf\t",(double)astar[i][j]/a);
+					printf("%-+.3lf\t",(double)astar[i][j]/a);
 				}
 				printf("\n");
 			}

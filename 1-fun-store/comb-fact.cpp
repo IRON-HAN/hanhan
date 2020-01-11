@@ -4,7 +4,7 @@
 
 #include <iostream>
 using namespace std;
-// 阶乘函数
+// 阶乘函数1
 long fact(int n){
     if(n<0)
         return -1;
@@ -12,6 +12,14 @@ long fact(int n){
         return 1;
     else
         return n*fact(n-1);
+}
+// 阶乘函数2--尾递归
+// a用来存放结果，传参时必须为1
+long Fac(int n,int a){
+    if(n==0||n==1)
+        return a;
+    else
+        return Fac(n-1, n*a);
 }
 // 组合数函数
 long comb(int m, int k){

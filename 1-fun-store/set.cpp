@@ -1,4 +1,7 @@
 // 2020/1/11
+// set和multiset的区别在于容器里不能有重复元素
+// a和b重复<=>“a必须排在b前面”和“b必须排在a前面”都不成立
+// set插入元素可能不成功
 
 #include <iostream>
 #include <cstring>

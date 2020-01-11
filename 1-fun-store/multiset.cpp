@@ -1,5 +1,15 @@
-// 2020/1/11
-// 平衡二叉树
+//  2020/1/11
+//  头文件：<set>
+// 用法：multiset<T> st;
+// 定义了一个multiset变量st，
+// st里面可以存放T类型的数据，并且能自动排序。
+// 开始st为空.
+// 排序规则：表达式 “a < b”为true，则 a 排在 b 前面
+// 操作：
+// st.insert:插入
+// st.find:查找
+// st.erase：删除
+// 复杂度： O(log n)
 
 #include <cstdlib>
 #include <functional>
@@ -22,8 +32,12 @@ int main(){
         st1.insert(a[i]);
     }
     // 迭代器，类似于指针
+    // i是迭代器，相当于指针，可用于指向multiset中的元素。
+    // 访问multiset中的元素要通 过迭代器。
     multiset<int>::iterator i;
     // 遍历
+    // st.begin() 返回值类型为multiset<T>::iterator, 是指向st中的头一个元素的迭代器
+    // st.end() 返回值类型为 multiset<T>::iterator, 是指向st中的最后一个元素后面的迭代器
     for (i = st1.begin(); i != st1.end(); i++)
         cout << *i << ",";
     cout << endl;

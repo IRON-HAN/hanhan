@@ -1,4 +1,5 @@
 // 求定积分通用函数（矩形法）
+// 2020/1/10
 
 #include <math.h>
 #include <stdio.h>
@@ -13,12 +14,11 @@ int main()
     float a1, b1, a2, b2, a3, b3, c;
     float (*p)(float);
 
-
-    printf("input a1,b1:\n");
+    printf("input a1,b1:(the integral of sin(x))\n");
     scanf("%f %f", &a1, &b1);
-    printf("input a2,b2:\n");
+    printf("input a2,b2:(the integral of cos(x)\n");
     scanf("%f %f", &a2, &b2);
-    printf("input a3,b3:\n");
+    printf("input a3,b3:(the integral of e^(x)\n");
     scanf("%f %f", &a3, &b3);
     // 使P指向f_sin函数
     p = f_sin;

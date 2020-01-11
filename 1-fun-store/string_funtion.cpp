@@ -1,8 +1,9 @@
 // 字符串操作库函数
+// 静态变量strtok的实现
 // 2020/1/10
 #include <iostream>
 #include <cstring>
-
+char *stringtok(char *p, char *sep);
 using namespace std;
 int main() {
     char s1[100] = "12345";
@@ -30,5 +31,33 @@ int main() {
         cout << p << endl;
         p = strtok(NULL, " ,.");
     }
+    char * p0 = stringtok(str, " ,.");
+    while (p0!=NULL) {
+        cout << p0 << endl;
+        p0 = stringtok(NULL, " ,.");
+    }
+
+
     return 0;
+
+}
+char *stringtok(char *p,const char *sep){
+    // 本次查找子串的起点
+    static char *start;
+    if(p)
+        start = p;
+    // 跳过分隔符号
+    for (; *start && strchr(sep, *start); start ++)
+        ;
+    if( * start == 0)
+        return NULL;
+    char *q = start;
+    // 跳过非分隔符号
+    for (; *start && !strchr(sep, *start); start ++)
+        ;
+    if (*start) {
+        *start = 0;
+        start++;
+    }
+    return q;
 }

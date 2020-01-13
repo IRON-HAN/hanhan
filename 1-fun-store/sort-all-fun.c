@@ -1,4 +1,7 @@
 // 2020/1/10
+// 2020/1/12
+// 实现升序与降序的合一
+
 // 交换
 void swap(int *a,int *b){
     int t;
@@ -6,13 +9,22 @@ void swap(int *a,int *b){
     *a = *b;
     *b = t;
 }
+//升序函数
+int ascend(int a, int b){
+    return a<b;//为真，则升序
+}
+//降序函数
+int descend(int a, int b){
+    return a>b;//为真，则降序
+}
 // 选择排序 O(n^2)
-void selection_sort(int *a, int size){
-    for (int i = 0; i < size ; i++) {
+// 改进： 既可以升序 又可以降序
+void selection_sort(int *a, int size, int (*compare)(int, int)){
+    for (int i = 0; i < size-1 ; i++) {
         // tmpmin用于记录当前最小元素的下标
         int tmpMin = i;
         for ( int j = i+1; j< size ; j++) {
-            if (a[j]<a[tmpMin])
+            if ((*compare)(a[j], a[tmpMin]))
                 tmpMin = j;
         }
     // 将第i小的元素放在第i的位置上

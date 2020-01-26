@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 // 阶乘函数1
-long fact(int n){
+long long fact(int n){
     if(n<0)
         return -1;
     else if(n==1||n==0)
@@ -15,14 +15,17 @@ long fact(int n){
 }
 // 阶乘函数2--尾递归
 // a用来存放结果，传参时必须为1
-long Fac(int n,int a){
+long long Fac(int n,int a){
     if(n==0||n==1)
         return a;
     else
         return Fac(n-1, n*a);
 }
 // 组合数函数
-long comb(int m, int k){
+long long comb(int m, int k){
+    // cout << "fac(m): " << fact(m) << endl;
+    // cout << "fac(k): " << fact(k) << endl;
+    // cout << "fac(m-k): " << fact(m-k) << endl;
     return fact(m)/fact(k)/fact(m-k);
 }
 

@@ -8,15 +8,15 @@
 
 void Demo_1()//样例一
 {
-	int a[10];//声明的是int数组（注意 ）
+	int a[10];//声明的是int数组（注意）
 	memset(a,-1,sizeof(int )*10);//第二个参数可以变为0
  	//此时的第二个参数不能为单个字符 (具体原因我不是很清楚）
 	for(int i = 0; i<10 ; i++)
 	{
 		printf("%d ",a[i]);
 	}
- }
- void Demo_2()//样例二
+}
+void Demo_2()//样例二
 {
 	char a[10];
 	memset(a,'a',sizeof(char)*10);//第二个参数为单个字符
@@ -27,8 +27,8 @@ void Demo_1()//样例一
 	{
 		printf("%c ",a[i]);
 	}
- }
- void Demo_3()//样例三
+}
+void Demo_3()//样例三
 {
 	char a[] = "sdadasdaaqweqwsdas";//声明并赋值
 	memset(a,'a',sizeof(char)*5);//指定前5个元素
@@ -37,7 +37,7 @@ void Demo_1()//样例一
 	{
 		printf("%c ",a[i]);
 	}
- }
+}
 int main()
 {
 	printf("-------样例一---------\n");
@@ -48,6 +48,4 @@ int main()
 	Demo_3();
 
 }
-————————————————
-版权声明：本文为CSDN博主「清水samny」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/sun1318578251/article/details/86769698
+

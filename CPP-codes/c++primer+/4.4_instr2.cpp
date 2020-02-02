@@ -1,6 +1,6 @@
-//读取多个字符串--成功
-//函数 cin.getline
-
+// 读取多个字符串--成功
+// 函数 cin.getline
+// 调用: cin.getline(string,size)
 #include <iostream>
 using namespace std;
 int main(){
@@ -16,3 +16,13 @@ int main(){
     cout << " for you. " << name << ".\n";
     return 0;
 }
+// output:
+// Enter your name:
+// Dirk Hammernose
+// Enter your favorite dessert:
+// Radish Torte
+// I have some delicious Radish Torte for you, Dirk Hammernose.
+
+// explain:
+// cin.getline()读取“Jud”以及用户按Enter键而生成的换行符("\n")
+// 并将换行符替换为空字符("\0")

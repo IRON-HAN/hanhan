@@ -15,3 +15,7 @@ int main(){
     cout << " for you. " << name << ".\n";
     return 0;
 }
+// Enter your name:
+// Alistair Dreeb
+// Enter your favorite dessert:
+// I have some delicious Dreeb for you, Alistair.

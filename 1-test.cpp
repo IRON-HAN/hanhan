@@ -1,125 +1,58 @@
-
-const int MaxSize=10;
-class Array_int
-{
-private:
-	int length;
-	int data[MaxSize];
-public:
-	Array_int();//相当于初始化操作，一个空数组，长度为0
-	Array_int(int a[],int n);//用给定的长度为n的数组a初始化数据成员
-	void Display();//显示所有数组元素
-	void Insert(int x);//将给定的元素x插入到数组中后，仍保持数组的有序性；
-    //需要判断插入新元素会不会发生存储空间的溢出情况，若发生溢出提示插入操作失败；
-    //插入过程中，插入位置确定后，从插入位置至最后一个元素全部往后移一位，给新插入元素空出插入位置。
-	void Delete(int x);//从数组中删除指定元素x，后面的元素全部要往前移一位；做删除前需要判断数组是否为空，若为空表，则删除操作失败
-	int Search(int x);//从数组中查找指定元素x，若查找成功返回元素在数组中位置，查找失败返回特定值-1
-};
-#include <cstring>
-#include <cstdio>
 #include <iostream>
+#include <cstdio>
+#include <fstream>
 #include <algorithm>
+#include <cmath>
+#include <deque>
+#include <vector>
+#include <queue>
+#include <string>
+#include <cstring>
+#include <map>
+#include <stack>
+#include <set>
+#include <sstream>
+#include <list>
+#include <functional>
+#include <cstdlib>
 using namespace std;
+// chcp 65001
 
-Array_int::Array_int(){
-    cout << "in fun: "<< __func__ << endl;
-    length=0;
-    memset(data, 0, sizeof(data));
+
+
+void Swap(int &n1, int &n2) {
+int tmp;
+tmp = n1;
+n1 = n2;
+n2 = tmp;
+}
+int gcd(int m, int n) {
+
+   // ensure that m is greater than or equal to n
+	if (m < n) {
+		Swap(m, n);
+	}
+
+	if (n == 0) {
+		cerr << "bad gcd request" << endl;
+		exit(1);
+	}
+
+	// loop until r is 0
+
+	int r = m % n;
+
+	while (r) {
+		m = n;
+		n = r;
+		r = m % n;
+	}
+
+	return n;
 }
 
-Array_int::Array_int(int a[],int n){
-    cout << "in fun: "<< __func__ << endl;
-    length = n;
-    for (int i = 0; i < n; ++i) {
-        data[i] = a[i];
-    }
-    return;
-}
-
-void Array_int::Display(){
-    cout << "in fun: "<< __func__ << endl;
-    sort(data, data + length);
-    for (int i = 0 ; i< length; ++i) {
-        cout << data[i] << '\t';
-    }
-    cout << endl;
-    return;
-}
-
-void Array_int::Insert(int x){
-    cout << "in fun: "<< __func__ << endl;
-    if (length==MaxSize)
-        cout << "the array is full.\n";
-    else{
-
-        data[length] = x;
-        length++;
-
-        cout << "done!\n";
-    }
-}
-
-int Array_int::Search(int x){
-    cout << "in fun: "<< __func__ << endl;
-    // 查找区间的左右端点
-    int Left = 0;
-    int Right = this->length - 1;
-    // 直到区间为空集时停止查找
-    while (Left<=Right) {
-        int mid = Left + (Right - Left) / 2;
-        if(x==data[mid])
-            return mid;
-        else if( x > data[mid])
-            Left = mid + 1;
-        else
-            Right = mid - 1;
-    }
-    return -1;
-}
-
-void Array_int::Delete(int x){
-    cout << "in fun: "<< __func__ << endl;
-    int pos = this->Search(x);
-    if (length==0 || pos == -1) {
-        cout << "failed.\n";
-    }
-    else{
-        for (int i = pos; i < length; ++i) {
-            data[i] = data[i + 1];
-        }
-        length--;
-        cout << "done!\n";
-    }
-}
-int main(){
-    Array_int array;
-    cout << "object: array\n";
-    array.Display();
-
-    int a[3] = {98, 53, 8};
-    cout << "int a[3]:\n";
-    printf("98\t53\t8\n");
-
-    array = Array_int(a, 3);
-    cout << "object: array\n";
-    array.Display();
-
-    array.Insert(89);
-    array.Display();
-
-    cout << "return value of search(53):\n";
-    cout << array.Search(53) << endl;
-
-    cout << "return value of search(5):\n";
-    cout << array.Search(5) << endl;
-
-    cout << "delete (5):\n";
-    array.Delete(5);
-    array.Display();
-
-    cout << "delete(53):\n";
-    array.Delete(53);
-    array.Display();
-    system("pause");
-    return 0;
+int main() {
+	int n = gcd(5, -10);
+	cout << n << endl;
+	return 0;
 }

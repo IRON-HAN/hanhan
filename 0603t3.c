@@ -15,7 +15,7 @@ int main()
     {
         printf("请输入姓名(输入#结束循环):\n");
         gets(info[i].name);
-        if ((strcmp("#", info[i].name)) == 0)
+        if ((strcmp("#", info[i].name)) == 0) // 有用
             break;
         printf("请输入电话号码:\n");
         gets(info[i].tel_num);

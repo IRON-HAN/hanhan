@@ -8,13 +8,12 @@ using namespace std;
 
 int main()
 {
-    fstream read;
-    char input[80];
-    read.open("file.txt", ios::in);
+    fstream read;          //创造一个文件流对象
+    char input[80];        // 暂存
+    read.open("file.txt"); //打开文件
     if (!read)
-    {
-        cout << "failed\n"
-             << endl;
+    { // 判断打开失败
+        cout << "failed\n";
         return -1;
     }
 

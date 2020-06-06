@@ -328,6 +328,7 @@ namespace _0605
         }
     };
 } // namespace _0605
+
 using _0604_4::Cricle;
 using _0604_4::Shape;
 using _0604_4::Square;

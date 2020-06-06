@@ -79,15 +79,7 @@ public:
 		return *this;
 	}
 	//相加
-	friend Fraction operator+(const Fraction &frac1, const Fraction &frac2)
-	{
-		int comMul = ComMul(frac1.deno, frac2.deno);
-		int numer = comMul / frac1.deno * frac1.numer + comMul / frac2.deno * frac2.numer;
-		int deno = comMul;
-		Fraction temp(numer, deno);
-		temp = temp.RdcFrc();
-		return (temp);
-	}
+	friend Fraction operator+(const Fraction &frac1, const Fraction &frac2);
 
 	//相减
 	friend Fraction operator-(const Fraction &frac1, const Fraction &frac2)
@@ -128,12 +120,7 @@ public:
 	//!=
 	friend bool operator!=(Fraction &frac1, Fraction &frac2)
 	{
-		frac1 = frac1.RdcFrc();
-		frac2 = frac2.RdcFrc();
-		if (frac1 == frac2)
-			return false;
-		else
-			return true;
+		return !(frac1 == frac2);
 	}
 	// >
 	friend bool operator>(Fraction &frac1, Fraction &frac2)
@@ -147,27 +134,17 @@ public:
 	// <
 	friend bool operator<(Fraction &frac1, Fraction &frac2)
 	{
-		Fraction temp = frac1 - frac2;
-		if (temp.numer < 0)
-			return true;
-		else
-			return false;
+		return frac2 > frac1;
 	}
 	// >=
 	friend bool operator>=(Fraction &frac1, Fraction &frac2)
 	{
-		if (frac1 < frac2)
-			return false;
-		else
-			return true;
+		return !(frac1 < frac2);
 	}
 	// <=
 	friend bool operator<=(Fraction &frac1, Fraction &frac2)
 	{
-		if (frac1 > frac2)
-			return false;
-		else
-			return true;
+		return !(frac1 > frac2);
 	}
 	// >>
 	friend istream &operator>>(istream &sin, Fraction &frac)
@@ -189,6 +166,15 @@ public:
 		return sout;
 	}
 };
+Fraction operator+(const Fraction &frac1, const Fraction &frac2)
+{
+	int comMul = ComMul(frac1.deno, frac2.deno);
+	int numer = comMul / frac1.deno * frac1.numer + comMul / frac2.deno * frac2.numer;
+	int deno = comMul;
+	Fraction temp(numer, deno);
+	temp = temp.RdcFrc();
+	return (temp);
+}
 int main()
 {
 

@@ -1,22 +1,27 @@
 #include <iostream>
 using namespace std;
 
-class A{
+class A
+{
     int i;
-    public:
-        A():i(10){}
-        void get_i(){cout<<i<<endl;}
+
+public:
+    A() : i(10) {}
+    void get_i() { cout << i << endl; }
 };
 
-class B: public A{
-    private:
-        int j;
-    public:
-        B():j(30){}
-        void f() { cout << "B.j=" << j << endl; }
+class B : public A
+{
+private:
+    int j;
+
+public:
+    B() : j(30) {}
+    void f() { cout << "B.j=" << j << endl; }
 };
 
-int main(){
+int main()
+{
     A a;
     B b;
 
@@ -37,5 +42,4 @@ int main(){
     b.f();
 
     return 0;
-
 }

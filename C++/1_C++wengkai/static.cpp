@@ -9,6 +9,7 @@ public:
     A() { i = 0; } // note: Init_list不能初始化static member
     void print() { cout << i << endl; }
     void set_i(int ii) { i = ii; }
+    static void modify(int val) { i = val; }
 };
 
 int A::i = 5; // Definition with Value(in ".cpp")
@@ -19,6 +20,9 @@ int main()
     A a, b;
 
     a.set_i(10);
+    b.print();
+
+    A::modify(20);
     b.print();
 
     return 0;

@@ -1,41 +1,57 @@
 //构造函数与复制构造函数
-#include <iostream>
-#include <cstdio>
-#include <fstream>
 #include <algorithm>
 #include <cmath>
-#include <deque>
-#include <vector>
-#include <queue>
-#include <string>
+#include <cstdio>
+#include <cstdlib>
 #include <cstring>
+#include <deque>
+#include <fstream>
+#include <functional>
+#include <iostream>
+#include <list>
 #include <map>
-#include <stack>
+#include <queue>
 #include <set>
 #include <sstream>
-#include <list>
-#include <functional>
-#include <cstdlib>
+#include <stack>
+#include <string>
+#include <vector>
 using namespace std;
 // chcp 65001
 
 static int cnt = 0;
-class A{
+class A
+{
     int i;
 
 public:
-    void print(const string& msg="")
+    void print(const string &msg = "")
     {
-        if(msg.size())
+        if (msg.size())
             cout << msg << ": ";
         cout << "Obj_cnt= " << cnt << endl;
     }
 
-    A() { cnt++; print("A()");}
-    A(int i) { cnt++;print("A(int)"); }
-    A(const A &a) { cnt++;print("A(A&)"); }
-    ~A() { cnt--; print("~A");}
-
+    A()
+    {
+        ++cnt;
+        print("A()");
+    }
+    A(int i)
+    {
+        ++cnt;
+        print("A(int)");
+    }
+    A(const A &a)
+    {
+        ++cnt;
+        print("A(A&)");
+    }
+    ~A()
+    {
+        --cnt;
+        print("~A");
+    }
 };
 
 A f(A x)
@@ -54,11 +70,10 @@ int main()
     A h2 = 10;
     h2.print("after construction of h2");
     // 注意: 等价于 A h3(h2);
-    A h3 = h2;
+    A h3(h2);
     h3.print("after construction of h3");
-    A h4 = f(h1);
-    h1.print("after calling f()");
+    // A h4 = f(h1);
+    // h1.print("after calling f()");
 
     return 0;
-
 }

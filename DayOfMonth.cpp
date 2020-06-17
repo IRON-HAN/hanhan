@@ -6,8 +6,7 @@ namespace _0522
     {
         if (year % 400 == 0 || (year % 4 == 0 && year % 100))
             return true;
-        else
-            return false;
+        return false;
     }
     unsigned days_of_month(unsigned month, int year)
     {

@@ -165,7 +165,7 @@ namespace 多态
         double area() const override { return _side * _side; }
     };
 
-    double total(Shape *s[], int n)
+    double total(Shape **s, int n)
     {
         double sum = 0.0;
         for (int i = 0; i < n; ++i)
@@ -210,6 +210,7 @@ namespace access
         }
     };
 } // namespace access
+
 
 int main()
 {
